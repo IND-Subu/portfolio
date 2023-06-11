@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body,
+html {
+    background: whitesmoke;
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    position: relative;
+    display: flex;
+    background: white;
+    justify-content: space-between;
+    box-shadow: 0px 0px 4px 1px gray;
+    height: 4em;
+}
+
+header .hamburger {
+    display: none;
+}
+
+header .logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    left: 1em;
+}
+
+header .logo a {
+    text-decoration: none;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    transition: all .3s ease;
+}
+
+header .logo a:hover {
+    color: blueviolet;
+    transition: all .3s ease;
+}
+
+header .rightMenu {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 5px;
+    right: 1em;
+}
+
+.search {
+    position: relative;
+    right: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search #search-query {
+    height: 2em;
+    outline: none;
+    padding-left: 2px;
+    align-items: center;
+}
+
+.search #submit {
+    height: 2em;
+}
+
+.search #submit:hover {
+    background-color: rgb(185, 248, 185);
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.profile {
+    position: relative;
+    display: flex;
+    margin: 0 5px;
+    cursor: default;
+}
+
+.profile a {
+    cursor: pointer;
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background: #000;
+    height: 2em;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+.close-btn{
+    display: none;
+}
+.navbar .navmenu {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1em;
+}
+.menu-list {
+    list-style: none;
+    margin: 0 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.menu-list a {
+    color: white;
+    text-decoration: none;
+}
+.menu-list a:hover {
+    color: rgb(187, 255, 187);
+    cursor: pointer;
+}
+.social-links {
+    display: flex;
+    margin-right: 1em;
+    list-style: none;
+}
+.social-links li {
+    filter: invert(100%);
+    height: 15px;
+    width: 15px;
+    margin: 3px 8px;
+}
+.social-links #fb {
+    background: url('/components/src/fb.svg');
+}
+
+.social-links #twitter {
+    background: url('/components/src/twitter.svg');
+}
+
+.social-links #linkdin {
+    background: url('/components/src/linkedin.svg');
+}
+.profile-menu{
+    position: absolute;
+    display: flex;
+    top: 7rem;
+    right: 1em;
+    min-height: 15em;
+    min-width: 18em;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 2px darkgray;
+}
+.avatar{
+    position: relative;
+    background: url('/components/src/avatar/user.svg') no-repeat;
+    background-size: cover;
+    top: 5px;
+    height: 30px;
+    width: 30px;
+}
+.context-menu{
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    margin: 20px 8px;
+    background: whitesmoke;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px 0px gray;
+}
+.context-menu a{
+    text-decoration: none;
+    color: #010;
+    margin: 5px 20px;
+    font-size: 1.2em;
+    line-height: 35px;
+    font-family: serif;
+}
+.context-menu li:hover{
+    background: rgb(235, 235, 241);
+}
+.context-menu a:hover{
+    color: lightseagreen;
+}
+.login-modals{
+    padding: 3px 5px;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 2px 1px gray;
+    border-radius: 3px;
+    background-color: rgba(144, 238, 144, 0.527);
+}
+.login-modals:hover{
+    background-color: rgba(144, 238, 144, 0.774);
+}
+.login-modals a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+}
+
+
+/* MediaQuery Starting */
+/* Responsive Tablet View */
+@media screen and (min-width: 415px) and (max-width: 600px){
+    .logo{
+        font-size: .7em;
+    }
+    .search{
+        left: .1em;
+    }
+    #search-query{
+        width: 10em;
+        font-size: .8em;
+    }
+    #submit{
+        font-size: .8em;
+    }
+    .menu-list{
+        font-size: .7em;
+    }
+}
+/* Mobile View Max-width: 414px */
+@media screen and (max-width: 414px) {
+    header .hamburger {
+        position: relative;
+        display: flex;
+        height: 25px;
+        width: 25px;
+        font-size: 18pt;
+        justify-content: center;
+        top: .5em;
+        left: .5em;
+        background: url('/components/src/avatar/hamburger.svg') no-repeat;
+        background-size: cover;
+    }
+    .logo {
+        position: relative;
+        display: block;
+    }
+    .search {
+        display: none;
+    }
+    .profile {
+        height: 28px;
+        width: 28px;
+        border-radius: 20px;
+        margin: 1px;
+        padding: 1px;
+        background-image: url("/components/src/user-pen-solid.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .profile p,
+    .profile a {
+        display: none;
+    }
+    .navbar {
+        justify-content: space-evenly;
+        flex-direction: column;
+        display: none;
+        top: -3.2em;
+        height: 100vh;
+        width: 100vw;
+        left: 0%;
+        transition: all .5s ease-in;
+    }
+    .close-btn{
+        position: absolute;
+        display: flex;
+        top: 10px;
+        right: 1em;
+        height: 20px;
+        width: 20px;
+        justify-content: center;
+        align-items: center;
+        color: gray;
+        border: 1px solid silver;
+        border-radius: 20px;
+        transition: all .2s ease-out;
+    }
+    .close-btn:hover{
+        color: rgb(248, 138, 138);
+        border: 1px solid darkgray;
+        height: 21px;
+        width: 21px;
+        transition: all .2s ease-in;
+    }
+    .navbar .navmenu{
+        flex-direction: column;
+        font-size: 20px;
+        line-height: 40px;
+        align-items: center;
+        margin-left: 0;
+    }
+    .profile-menu{
+        min-height: 40vh;
+        width: 70vw;
+        top: 20vh;
+        left: 15vw;
+    }
+}
+.hidden{
+    display: none;
+}

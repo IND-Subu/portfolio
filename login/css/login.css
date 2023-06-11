@@ -1,0 +1,92 @@
+.profile-menu{
+    visibility: hidden;
+}
+.form-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    margin: 20vh auto;
+    box-shadow: 1px 1px 4px 2px gray;
+}
+.form-container .banner{
+    position: relative;
+    display: flex;
+    flex-basis: 50%;
+    height: 100%;
+    background: url('/login/src/bg0.jpg') no-repeat;
+    background-size: cover;
+    box-shadow: 1px 1px 4px 1px rgb(20, 20, 20);
+}
+.form-container .main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+}
+.form-container .main h2{
+    position: relative;
+    bottom: 2em;
+    color: rgb(21, 21, 58);
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#form input{
+    border-radius: 5px;
+    margin: 3px 0px;
+    height: 2.5em;
+    width: 90%;
+    outline: none;
+    border: none;
+    box-shadow: 2px 1px 4px 2px gray;
+    padding: 3px 5px;
+}
+#login,#signup{
+    background: lightgreen;
+}
+#login:hover,
+#signup:hover{
+    background: rgb(125, 250, 125);
+}
+.showAlert,.referer{
+    position: relative;
+    top: 2em;
+    color: red;
+    font-size: 18px;
+}
+.referer{
+    color: rgb(14, 14, 32);
+}
+.referer a{
+    text-decoration: none;
+    color: green;
+}
+
+
+
+/* Media Queries */
+/* Responsive Mobile View with 414px */
+@media screen and (max-width: 414px) {
+    .form-container{
+        height: 50vh;
+        width: 90%;
+        transform:  translateY(-15%);
+        /* box-shadow: none; */
+    }
+    .form-container .banner{
+        display: none;
+    }
+}
+
+
+
